@@ -3,6 +3,8 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Carousel from './src/components/Carousel';
 
+import Carousel from './src/components/Carousel';
+
 export default function App() {
   return (
     <View style={styles.container}>

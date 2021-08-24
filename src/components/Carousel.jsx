@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react'
 import { Text, View, Image, FlatList, StyleSheet, useWindowDimensions, Button, Animated } from 'react-native'
 import { data } from '../data';
@@ -9,6 +10,59 @@ export default function Carousel() {
 
   const scrollX = React.useRef(new Animated.Value(0)).current;
 
+=======
+import React, { useState, useEffect, useLocalStorage } from 'react'
+import { Text, View, Image, FlatList, StyleSheet, useWindowDimensions, Button } from 'react-native'
+
+import CarouselItem from './CarouselItem';
+
+export default function carousel() {
+
+  let url1 = 'https://images.unsplash.com/photo-1629653403057-68f915377196?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80';
+
+  let url2 = 'https://images.unsplash.com/photo-1629410240133-0c757773762a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80';
+
+  let url3 = 'https://images.unsplash.com/photo-1629667764072-6e156cd4422c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80';
+
+  const data = [{
+    title: "Primer bloque",
+    image: [url1, url2, url3]
+  },
+  {
+    title: "Segundo bloque",
+    image: [url1, url2, url3]
+  },
+  {
+    title: "Tercer bloque",
+    image: [url1, url2, url3]
+  },
+  {
+    title: "Cuarto bloque",
+    image: [url1, url2, url3]
+  },
+  {
+    title: "Quinto bloque",
+    image: [url1, url2, url3]
+  }, {
+    title: "Sexto bloque",
+    image: [url1, url2, url3]
+  },
+  {
+    title: "Septimo bloque",
+    image: [url1, url2, url3]
+  },
+  {
+    title: "Octavo bloque",
+    image: [url1, url2, url3]
+  }, {
+    title: "Noveno bloque",
+    image: [url1, url2, url3]
+  }
+  ]
+
+  const { width } = useWindowDimensions();
+
+>>>>>>> 11eab6d1e03b77fa9f5a1ca10bbbee04232ed5c4
   const styles = StyleSheet.create({
     container: {
       width: width
@@ -25,7 +79,10 @@ export default function Carousel() {
     }
   })
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 11eab6d1e03b77fa9f5a1ca10bbbee04232ed5c4
   const [state, setState] = useState({
     currentPage: 1,
     todosPerPage: 3,
@@ -55,6 +112,7 @@ export default function Carousel() {
 
   return (
     <View style={styles.container}>
+<<<<<<< HEAD
 
       <Animated.FlatList
         horizontal={true}
@@ -64,6 +122,11 @@ export default function Carousel() {
           { useNativeDriver: true }
         )}
         pagingEnabled={true}
+=======
+      <FlatList
+        horizontal={true}
+        data={currentTodos}
+>>>>>>> 11eab6d1e03b77fa9f5a1ca10bbbee04232ed5c4
         renderItem={({ item }) => <CarouselItem item={item} />}
       />
       <View style={styles.containerButton}>
@@ -87,5 +150,8 @@ export default function Carousel() {
     </View>
   )
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 11eab6d1e03b77fa9f5a1ca10bbbee04232ed5c4
